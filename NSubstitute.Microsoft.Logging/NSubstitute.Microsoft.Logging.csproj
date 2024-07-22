@@ -5,6 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <PackageId>NSubstitute.System.Logging</PackageId>
+    <Version>1.0.0-beta</Version>
+    <Title>ILogger verification utility</Title>
+    <Authors>Volodymyr Shyrmanov</Authors>
+    <Description>NSubstitute utility library that helps to verify Microsoft ILogger calls</Description>
+    <PackageTags>ILogger;Verification;UnitTests;NSubstitute</PackageTags>
+    <RepositoryUrl>https://github.com/vladimir-shirmanov/NSubstitute.Microsoft.Logging</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
