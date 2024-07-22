@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
-    <PackageId>NSubstitute.System.Logging</PackageId>
+    <PackageId>Recieve.NSubstitute.Logging</PackageId>
     <Version>1.0.0-beta</Version>
     <Title>ILogger verification utility</Title>
     <Authors>Volodymyr Shyrmanov</Authors>
