@@ -2,7 +2,9 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
 name: .NET
-
+env:
+  BUILD_CONFIGURATION: Release
+  NUPKG_OUTPUT: nupkgs
 on:
   push:
     branches: [ "main" ]
@@ -23,7 +25,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore -c ${{ env.BUILD_CONFIGURATION }}
     - name: Test
       run: dotnet test --no-build --verbosity normal
  
@@ -38,6 +40,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Pack
-      run: dotnet pack -c Release -o "~/nupks"
+      run: dotnet pack -c ${{ env.BUILD_CONFIGURATION }} -o ${{ env.NUPKG_OUTPUT }}
     - name: Push
       run: dotnet nuget push --api-key ${{ secrets.NUGET_TOKEN }} -s "https://api.nuget.org/v3/index.json" "~/nupkgs/*.nupkg"
