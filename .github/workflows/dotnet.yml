@@ -42,4 +42,4 @@ jobs:
     - name: Pack
       run: dotnet pack -c ${{ env.BUILD_CONFIGURATION }} -o ${{ env.NUPKG_OUTPUT }}
     - name: Push
-      run: dotnet nuget push --api-key ${{ secrets.NUGET_TOKEN }} -s "https://api.nuget.org/v3/index.json" "~/nupkgs/*.nupkg"
+      run: dotnet nuget push --api-key ${{ secrets.NUGET_TOKEN }} -s "https://api.nuget.org/v3/index.json" ${{ env.NUPKG_OUTPUT }}/*.nupkg
