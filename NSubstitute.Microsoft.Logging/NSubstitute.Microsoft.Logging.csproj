@@ -9,8 +9,10 @@
     <Version>1.0.0-beta</Version>
     <Title>ILogger verification utility</Title>
     <Authors>Volodymyr Shyrmanov</Authors>
+    <Copyright>Copyright (c) 2024 Volodymyr Shyrmanov</Copyright>
     <Description>NSubstitute utility library that helps to verify Microsoft ILogger calls</Description>
     <PackageTags>ILogger;Verification;UnitTests;NSubstitute</PackageTags>
+    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/vladimir-shirmanov/NSubstitute.Microsoft.Logging</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
